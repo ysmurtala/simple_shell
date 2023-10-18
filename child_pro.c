@@ -12,12 +12,12 @@ void _child(char **args)
 	if (pid == 0)
 	{
 		execve(args[0], args, environ);
-		perror("failure");
+		perror("failed");
 		exit(2);
 	}
 	else if (pid < 0)
 	{
-		perror("failure");
+		perror("failed");
 	}
 	else
 	{
