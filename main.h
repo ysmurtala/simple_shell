@@ -6,7 +6,7 @@
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <unistd.h>
-
+#include<sys/stat.h>
 int sum(void);
 char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);

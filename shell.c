@@ -47,6 +47,7 @@ int main(void)
 			}
 			if (_strcmp(args[0], "env") == 0)
 			{
+
 				env();
 				freeall(args);
 				continue;
