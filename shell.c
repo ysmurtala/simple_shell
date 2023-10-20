@@ -12,7 +12,7 @@ int main(void)
 	int check;
 	char *content = NULL;
 	size_t size = 0;
-	size_t reads = 1;
+	ssize_t reads;
 	int intractive  = 0;
 	char **args;
 
@@ -25,6 +25,10 @@ int main(void)
 			write(1, "$ ", 2);
 		}
 		reads = getline(&content, &size, stdin);
+		if (reads == -1)
+		{
+			break;
+		}
 		args = init_arg(content);
 		if (args == NULL)
 		{
