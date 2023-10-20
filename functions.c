@@ -51,32 +51,3 @@ int _strcmp(char *s1, char *s2)
 	}
 	return (0);
 }
-/**
- * *_strcat - function that concatinate a string
- * @dest: function parameter
- * @src: function parameter
- * Return: dest
- */
-char *_strcat(char *dest, char *src)
-{
-	int i;
-
-	for (i = 0; ; i++)
-	{
-		if (dest[i] == '\0')
-		{
-			int j = 0;
-
-			dest[i] = src[j];
-			j++;
-			i++;
-			for ( ; src[j] != '\0' ; j++, i++)
-			{
-				dest[i] = src[j];
-			}
-			src[i] = '\0';
-			break;
-		}
-	}
-	return (dest);
-}
