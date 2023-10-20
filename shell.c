@@ -38,7 +38,7 @@ int main(void)
 		if (_strcmp(args[0], "exit") == 0)
 		{
 			freeall(args);
-			break;
+			exit(0);
 		}
 		if (_strcmp(args[0], "env") == 0)
 		{
@@ -50,7 +50,7 @@ int main(void)
 		check = _child(args);
 
 		if (intractive == 0)
-			break;
+			exit(0);
 		if (check == 0)
 			continue;
 		if (reads > 1)
